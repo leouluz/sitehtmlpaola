@@ -3418,8 +3418,9 @@
         }
 
         if (n === 2) {
-          const peso = parseFloat(document.getElementById("peso").value);
-          if (!peso || peso < 30 || peso > 300) {
+          const pesoRaw = document.getElementById("peso").value || document.getElementById("peso").getAttribute("data-raw") || "";
+          const peso = parseFloat(pesoRaw.replace(",", "."));
+          if (isNaN(peso) || peso < 30 || peso > 300) {
             markErr("peso", true);
             showErr("err-peso", true);
             ok = false;
@@ -3428,8 +3429,9 @@
             showErr("err-peso", false);
           }
 
-          const alt = parseFloat(document.getElementById("altura").value);
-          if (!alt || alt < 100 || alt > 250) {
+          const altRaw = document.getElementById("altura").value || document.getElementById("altura").getAttribute("data-raw") || "";
+          const alt = parseFloat(altRaw.replace(",", "."));
+          if (isNaN(alt) || alt < 100 || alt > 250) {
             markErr("altura", true);
             showErr("err-altura", true);
             ok = false;
@@ -4037,9 +4039,13 @@ Enviado pelo site nutripaolaribeiro.com.br`;
       //  IMC CALCULATOR
       // ============================================================
       function calcIMC() {
-        const p = parseFloat(document.getElementById("peso").value);
-        const a = parseFloat(document.getElementById("altura").value);
-        if (!p || !a || a < 50) {
+        const pesoEl = document.getElementById("peso");
+        const altEl = document.getElementById("altura");
+        const pesoRaw = pesoEl.value || pesoEl.getAttribute("data-raw") || "";
+        const altRaw = altEl.value || altEl.getAttribute("data-raw") || "";
+        const p = parseFloat(pesoRaw.replace(",", "."));
+        const a = parseFloat(altRaw.replace(",", "."));
+        if (isNaN(p) || isNaN(a) || a < 50) {
           document.getElementById("imc-display").style.display = "none";
           return;
         }
@@ -4063,8 +4069,15 @@ Enviado pelo site nutripaolaribeiro.com.br`;
         pill.className = "field-computed " + cls;
         pill.textContent = txt;
       }
-      document.getElementById("peso").addEventListener("input", calcIMC);
-      document.getElementById("altura").addEventListener("input", calcIMC);
+      document.getElementById("peso").addEventListener("input", function() {
+        // Salva valor bruto antes que o browser sanitize (lida com vírgula decimal)
+        if (this.value !== "") this.setAttribute("data-raw", this.value);
+        calcIMC();
+      });
+      document.getElementById("altura").addEventListener("input", function() {
+        if (this.value !== "") this.setAttribute("data-raw", this.value);
+        calcIMC();
+      });
 
       // ============================================================
       //  AGE CALCULATOR
