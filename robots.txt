@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.paolaribeironutricionista.com.br/sitemap.xml
