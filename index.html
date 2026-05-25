@@ -1165,6 +1165,19 @@
         margin-top: 16px;
         text-align: center;
       }
+      .form-error {
+        display: none;
+        background: #fff5f5;
+        border: 1px solid rgba(180, 40, 40, 0.25);
+        border-radius: var(--radius-sm);
+        padding: 20px 24px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: #b42828;
+        margin-top: 16px;
+        text-align: center;
+      }
       .contato-info {
         display: flex;
         flex-direction: column;
@@ -1560,6 +1573,146 @@
           text-align: center;
         }
       }
+
+      /* ---- Plataformas ---- */
+      .plataformas {
+        padding: 72px 24px;
+        background: var(--bg-alt);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .plataformas-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+      .plataformas-subtitle {
+        font-family: "Montserrat", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 12px;
+      }
+      .plataformas-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(26px, 4vw, 36px);
+        font-weight: 600;
+        color: var(--primary-dark);
+        line-height: 1.2;
+      }
+      .plataformas-grid {
+        display: flex;
+        justify-content: center;
+        max-width: 820px;
+        margin: 0 auto;
+      }
+      .plataforma-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 36px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        max-width: 480px;
+        width: 100%;
+        transition: box-shadow 250ms ease, transform 250ms ease;
+      }
+      .plataforma-wellhub-badge {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        background: rgba(27, 94, 59, 0.06);
+        border: 1px solid rgba(27, 94, 59, 0.15);
+        border-radius: var(--radius-sm);
+        padding: 12px 16px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 13px;
+        color: var(--text);
+        line-height: 1.5;
+      }
+      .plataforma-card:hover {
+        box-shadow: 0 8px 32px rgba(27, 94, 59, 0.1);
+        transform: translateY(-2px);
+      }
+      .plataforma-icon-wrap {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .plataforma-icon-wrap.wellhub {
+        background: #e8f5ee;
+      }
+      .plataforma-icon-wrap.nutrium {
+        background: #eef3ff;
+      }
+      .plataforma-name {
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--primary-dark);
+        line-height: 1.2;
+      }
+      .plataforma-tag {
+        display: inline-block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        color: var(--primary);
+        background: rgba(27, 94, 59, 0.08);
+        border-radius: 100px;
+        padding: 3px 10px;
+        margin-left: 8px;
+        vertical-align: middle;
+      }
+      .plataforma-desc {
+        font-family: "Lato", sans-serif;
+        font-size: 15px;
+        color: var(--text-light);
+        line-height: 1.65;
+        flex: 1;
+      }
+      .plataforma-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: var(--primary);
+        text-decoration: none;
+        border: 1.5px solid var(--primary);
+        border-radius: 100px;
+        padding: 10px 20px;
+        transition: background 200ms ease, color 200ms ease;
+        align-self: flex-start;
+      }
+      .plataforma-link:hover {
+        background: var(--primary);
+        color: var(--white);
+      }
+      .plataforma-info {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text-light);
+      }
+      @media (max-width: 640px) {
+        .plataforma-card {
+          padding: 28px 24px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1593,7 +1746,7 @@
         <li><a href="#contato">Contato</a></li>
       </ul>
       <a
-        href="https://wa.me/5516999990000"
+        href="https://wa.me/5516999990000?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+agendar+uma+consulta."
         target="_blank"
         rel="noopener"
         class="btn-nav-cta"
@@ -1629,7 +1782,7 @@
       >
       <a href="#contato" class="drawer-link" onclick="closeDrawer()">Contato</a>
       <a
-        href="https://wa.me/5516999990000"
+        href="https://wa.me/5516999990000?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+agendar+uma+consulta."
         target="_blank"
         rel="noopener"
         class="drawer-cta"
@@ -1720,7 +1873,7 @@
           <div class="hero-gold-line" aria-hidden="true"></div>
           <div class="hero-btns">
             <a
-              href="https://wa.me/5516999990000"
+              href="https://wa.me/5516999990000?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+agendar+uma+consulta."
               target="_blank"
               rel="noopener"
               class="btn-primary"
@@ -1927,7 +2080,7 @@
               <li>Suporte entre consultas</li>
             </ul>
             <a
-              href="https://wa.me/5516999990000"
+              href="https://wa.me/5516999990000?text=Ol%C3%A1%2C+tenho+interesse+no+programa+de+emagrecimento+com+estrat%C3%A9gia.+Pode+me+dar+mais+informa%C3%A7%C3%B5es%3F"
               class="espec-link"
               target="_blank"
               rel="noopener"
@@ -1964,7 +2117,7 @@
               <li>Recuperação pós-treino</li>
             </ul>
             <a
-              href="https://wa.me/5516999990000"
+              href="https://wa.me/5516999990000?text=Ol%C3%A1%2C+tenho+interesse+na+consultoria+de+performance+e+hipertrofia.+Pode+me+dar+mais+informa%C3%A7%C3%B5es%3F"
               class="espec-link"
               target="_blank"
               rel="noopener"
@@ -2005,13 +2158,57 @@
               <li>Inflamação e intestino</li>
             </ul>
             <a
-              href="https://wa.me/5516999990000"
+              href="https://wa.me/5516999990000?text=Ol%C3%A1%2C+tenho+interesse+na+consulta+de+sa%C3%BAde+metab%C3%B3lica+e+cl%C3%ADnica.+Pode+me+dar+mais+informa%C3%A7%C3%B5es%3F"
               class="espec-link"
               target="_blank"
               rel="noopener"
               >Quero saber mais →</a
             >
           </article>
+        </div>
+      </section>
+
+      <!-- ============================================
+         PLATAFORMAS
+    ============================================ -->
+      <section class="plataformas" aria-label="Plataformas de atendimento">
+        <div class="plataformas-header animate-on-scroll">
+          <p class="plataformas-subtitle">Onde me encontrar</p>
+          <h2 class="plataformas-title">Consulta disponível<br />pelo Nutrium</h2>
+        </div>
+        <div class="plataformas-grid">
+
+          <!-- Nutrium -->
+          <div class="plataforma-card animate-on-scroll" data-delay="0.1s">
+            <div class="plataforma-icon-wrap nutrium" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3b5bdb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div>
+              <span class="plataforma-name">Nutrium</span>
+            </div>
+            <p class="plataforma-desc">
+              Após a consulta, seu plano alimentar fica disponível no app Nutrium. Acesse receitas, registro alimentar e acompanhe sua evolução a qualquer hora pelo celular.
+            </p>
+            <div class="plataforma-wellhub-badge" aria-label="Disponível pelo Wellhub">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1B5E3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M8 12l2.5 2.5L16 9"/></svg>
+              Atendimento pelo <strong>Wellhub</strong> disponível para planos <strong>Silver ou superior</strong> <span class="plataforma-tag">antigo Gympass</span>
+            </div>
+            <a
+              href="https://nutrium.com/paola"
+              target="_blank"
+              rel="noopener"
+              class="plataforma-link"
+              aria-label="Acessar perfil no Nutrium"
+            >
+              Acessar no Nutrium
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+
         </div>
       </section>
 
@@ -2324,7 +2521,7 @@
           todo o Brasil.
         </p>
         <a
-          href="https://wa.me/5516999990000"
+          href="https://wa.me/5516999990000?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+agendar+uma+consulta."
           target="_blank"
           rel="noopener"
           class="btn-cta-gold animate-on-scroll"
@@ -2441,6 +2638,14 @@
               >
                 ✓ Mensagem enviada com sucesso! Em breve entrarei em contato.
               </div>
+              <div
+                class="form-error"
+                id="form-error"
+                role="alert"
+                aria-live="polite"
+              >
+                ✗ Ocorreu um erro ao enviar. Por favor, entre em contato pelo WhatsApp.
+              </div>
             </form>
           </div>
           <!-- Informações -->
@@ -2466,7 +2671,7 @@
                 <div class="contato-item-title">WhatsApp</div>
                 <div class="contato-item-val">
                   <a
-                    href="https://wa.me/5516999990000"
+                    href="https://wa.me/5516999990000?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+agendar+uma+consulta."
                     target="_blank"
                     rel="noopener"
                     >(16) 99999-0000</a
@@ -2629,7 +2834,7 @@
               </svg>
             </a>
             <a
-              href="https://wa.me/5516999990000"
+              href="https://wa.me/5516999990000?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+agendar+uma+consulta."
               target="_blank"
               rel="noopener"
               aria-label="WhatsApp"
@@ -2661,7 +2866,7 @@
 
     <!-- WhatsApp Float -->
     <a
-      href="https://wa.me/5516999990000"
+      href="https://wa.me/5516999990000?text=Ol%C3%A1%2C+vim+pelo+site+e+gostaria+de+agendar+uma+consulta."
       target="_blank"
       rel="noopener"
       class="whatsapp-float"
@@ -2759,21 +2964,40 @@
       // ---- Contact form submit ----
       const contactForm = document.getElementById("contact-form");
       const formSuccess = document.getElementById("form-success");
+      const formError = document.getElementById("form-error");
       if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
+        contactForm.addEventListener("submit", async function (e) {
           e.preventDefault();
           const btn = this.querySelector(".btn-submit");
           btn.textContent = "Enviando...";
           btn.disabled = true;
-          setTimeout(() => {
-            contactForm.reset();
+          formSuccess.style.display = "none";
+          formError.style.display = "none";
+
+          const data = new FormData(this);
+          data.append("access_key", "f0e26518-6581-4c96-8416-e34265b35c02");
+          data.append("subject", "Novo contato pelo site — Paola Ribeiro Nutricionista");
+
+          try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              body: data,
+            });
+            const json = await res.json();
+            if (json.success) {
+              contactForm.reset();
+              formSuccess.style.display = "block";
+              setTimeout(() => { formSuccess.style.display = "none"; }, 7000);
+            } else {
+              throw new Error(json.message || "Erro desconhecido");
+            }
+          } catch {
+            formError.style.display = "block";
+            setTimeout(() => { formError.style.display = "none"; }, 8000);
+          } finally {
             btn.textContent = "Enviar mensagem";
             btn.disabled = false;
-            formSuccess.style.display = "block";
-            setTimeout(() => {
-              formSuccess.style.display = "none";
-            }, 6000);
-          }, 1500);
+          }
         });
       }
 
