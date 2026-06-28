@@ -6,17 +6,17 @@
     <title>Formulário de Atendimento | Paola Ribeiro Nutricionista</title>
     <meta
       name="description"
-      content="Preencha o formulário de anamnese nutricional para iniciar seu atendimento com a nutricionista Paola Ribeiro. Atendimento personalizado para emagrecimento, hipertrofia e nutrição clínica."
+      content="Preencha o formulário de anamnese nutricional para iniciar seu atendimento com a nutricionista Paola Ribeiro."
     />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noindex, follow" />
     <link
       rel="canonical"
-      href="https://www.paolaribeironutricionista.com.br/formulario-de-atendimento"
+      href="https://www.paolaribeironutricionista.com.br/formulario-de-atendimento.html"
     />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://www.paolaribeironutricionista.com.br/formulario-de-atendimento"
+      content="https://www.paolaribeironutricionista.com.br/formulario-de-atendimento.html"
     />
     <meta
       property="og:title"
@@ -28,7 +28,7 @@
     />
     <meta
       property="og:image"
-      content="https://www.paolaribeironutricionista.com.br/og-image.jpg"
+      content="https://www.paolaribeironutricionista.com.br/assets/og-image.jpg"
     />
     <meta property="og:locale" content="pt_BR" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -42,7 +42,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://www.paolaribeironutricionista.com.br/og-image.jpg"
+      content="https://www.paolaribeironutricionista.com.br/assets/og-image.jpg"
     />
     <link
       rel="icon"
@@ -55,7 +55,7 @@
         "@type": "MedicalBusiness",
         "name": "Paola Fernanda Ribeiro Nutricionista",
         "url": "https://www.paolaribeironutricionista.com.br",
-        "telephone": "+5516999990000",
+        "telephone": "+5516992218844",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Ribeirão Preto",
@@ -71,7 +71,6 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600;700&family=Lato:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       :root {
         --primary: #1b5e3b;
@@ -508,7 +507,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 200ms;
+        transition: background 200ms ease, border-color 200ms ease;
       }
       .obj-card.selected .obj-check {
         background: var(--accent);
@@ -555,7 +554,7 @@
         text-align: center;
         cursor: pointer;
         background: var(--white);
-        transition: all 200ms;
+        transition: border-color 200ms ease, background 200ms ease;
         user-select: none;
       }
       .scale-btn .emoji {
@@ -594,7 +593,7 @@
         padding: 16px 14px;
         cursor: pointer;
         background: var(--white);
-        transition: all 200ms;
+        transition: border-color 200ms ease, background 200ms ease;
         user-select: none;
       }
       .rel-card:hover {
@@ -667,7 +666,7 @@
         border-radius: var(--radius-sm);
         padding: 14px 28px;
         cursor: pointer;
-        transition: all 200ms;
+        transition: background 200ms ease;
         white-space: nowrap;
       }
       .btn-prev:hover {
@@ -685,7 +684,7 @@
         border-radius: var(--radius-sm);
         padding: 15px 28px;
         cursor: pointer;
-        transition: all 200ms;
+        transition: background 200ms ease, transform 200ms ease;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -790,7 +789,7 @@
         border-radius: var(--radius-sm);
         padding: 14px 28px;
         text-decoration: none;
-        transition: all 200ms;
+        transition: background 200ms ease, color 200ms ease;
       }
       .btn-back-home:hover {
         background: var(--primary);
@@ -809,6 +808,17 @@
         }
         .btn-prev {
           width: 100%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
         }
       }
     </style>
@@ -868,6 +878,7 @@
 
     <!-- MAIN -->
     <main class="form-main" id="form-main">
+      <input type="text" name="botcheck" id="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
       <!-- Step indicator -->
       <div class="step-indicator" id="step-indicator">
         <span class="step-label" id="step-label-text">Etapa 1 de 7</span>
@@ -3255,9 +3266,18 @@
             />
             <span class="check-custom"></span>
             <span style="font-size: 14px; line-height: 1.5"
-              >Li e concordo que estas informações serão utilizadas
-              exclusivamente para fins de atendimento nutricional pela Dra.
-              Paola Ribeiro.<span class="req" style="color: var(--accent)"
+              >Li e concordo com a
+              <a
+                href="./privacidade.html"
+                target="_blank"
+                rel="noopener"
+                style="color: var(--primary); text-decoration: underline"
+                >Política de Privacidade</a
+              >
+              e autorizo o uso dos meus dados, incluindo dados de saúde,
+              exclusivamente para fins de avaliação e acompanhamento
+              nutricional pela nutricionista Paola Ribeiro (CRN-3
+              76261).<span class="req" style="color: var(--accent)"
                 >*</span
               ></span
             >
@@ -3318,7 +3338,7 @@
       // ============================================================
       const CONFIG = {
         WEB3FORMS_KEY: "f0e26518-6581-4c96-8416-e34265b35c02",
-        WHATSAPP_NUMBER: "5516999990000", // número com DDI+DDD, sem espaços
+        WHATSAPP_NUMBER: "5516992218844", // número com DDI+DDD, sem espaços
         NUTRICIONISTA_NOME: "Paola Ribeiro",
       };
 
@@ -3782,6 +3802,9 @@ Enviado pelo site paolaribeironutricionista.com.br`;
             CONFIG.WEB3FORMS_KEY && CONFIG.WEB3FORMS_KEY !== "SUA_CHAVE_AQUI";
 
           if (keyConfigured) {
+            // ---- Honeypot check ----
+            if (document.getElementById("botcheck")?.value) return;
+
             // ---- Envio via Web3Forms (email) ----
             try {
               const payload = {

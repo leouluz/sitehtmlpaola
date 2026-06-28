@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog de Nutrição | Paola Ribeiro Nutricionista</title>
+    <meta
+      name="description"
+      content="Artigos sobre nutrição esportiva, emagrecimento, saúde hormonal e alimentação saudável. Conteúdo baseado em ciência por Paola Ribeiro, nutricionista CRN-3 76261."
+    />
+    <meta name="author" content="Paola Fernanda Ribeiro" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.paolaribeironutricionista.com.br/blog.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Blog de Nutrição | Paola Ribeiro Nutricionista" />
+    <meta property="og:description" content="Artigos sobre nutrição esportiva, emagrecimento e saúde hormonal baseados em ciência." />
+    <meta property="og:url" content="https://www.paolaribeironutricionista.com.br/blog.html" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%231B5E3B' rx='6'/><text y='22' x='6' font-size='18' fill='white' font-family='serif'>P</text></svg>" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/png/logo.png" />
+    <link rel="apple-touch-icon" href="./assets/png/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --primary: #1B5E3B;
+        --primary-light: #2E7D52;
+        --primary-dark: #0F3D24;
+        --accent: #C9A84C;
+        --bg: #FAF8F4;
+        --bg-alt: #F3F0EB;
+        --white: #ffffff;
+        --text: #1a1a1a;
+        --text-light: #5a5a5a;
+        --border: rgba(27, 94, 59, 0.12);
+        --radius: 12px;
+        --radius-sm: 8px;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { background: var(--bg); color: var(--text); font-family: "Lato", sans-serif; }
+
+      /* Navbar */
+      .blog-nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 0 32px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+      .nav-logo img { height: 30px; width: 30px; }
+      .nav-logo-name { font-family: "Montserrat", sans-serif; font-size: 15px; font-weight: 700; color: var(--primary-dark); }
+      .nav-logo-sub { font-family: "Montserrat", sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); display: block; }
+      .nav-back { font-family: "Montserrat", sans-serif; font-size: 13px; font-weight: 600; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+      .nav-back:hover { color: var(--primary-dark); }
+
+      /* Hero */
+      .blog-hero {
+        padding: 64px 24px 56px;
+        text-align: center;
+        border-bottom: 1px solid var(--border);
+        background: var(--white);
+      }
+      .blog-hero-tag {
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 12px;
+      }
+      .blog-hero-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(32px, 5vw, 52px);
+        font-weight: 600;
+        color: var(--primary-dark);
+        margin-bottom: 16px;
+        line-height: 1.15;
+      }
+      .blog-hero-sub {
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        color: var(--text-light);
+        max-width: 560px;
+        margin: 0 auto;
+        line-height: 1.65;
+      }
+
+      /* Categories */
+      .blog-cats {
+        padding: 24px;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-bottom: 1px solid var(--border);
+        background: var(--bg-alt);
+      }
+      .blog-cat-btn {
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text-light);
+        background: none;
+        border: 1.5px solid var(--border);
+        border-radius: 100px;
+        padding: 7px 16px;
+        cursor: pointer;
+        transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+      }
+      .blog-cat-btn:hover,
+      .blog-cat-btn.active {
+        background: var(--primary);
+        color: var(--white);
+        border-color: var(--primary);
+      }
+
+      /* Grid */
+      .blog-grid-wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 56px 24px 80px;
+      }
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+      @media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 560px) { .blog-grid { grid-template-columns: 1fr; } }
+
+      /* Card */
+      .post-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: box-shadow 250ms ease, transform 250ms ease;
+        text-decoration: none;
+        color: inherit;
+      }
+      .post-card:hover { box-shadow: 0 8px 32px rgba(27,94,59,0.1); transform: translateY(-3px); }
+      .post-card-img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 42px;
+        color: rgba(255,255,255,0.3);
+        flex-shrink: 0;
+      }
+      .post-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; gap: 12px; }
+      .post-cat-tag {
+        display: inline-block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--primary);
+        background: rgba(27,94,59,0.08);
+        border-radius: 100px;
+        padding: 3px 10px;
+        align-self: flex-start;
+      }
+      .post-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--primary-dark);
+        line-height: 1.25;
+      }
+      .post-excerpt {
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        color: var(--text-light);
+        line-height: 1.6;
+        flex: 1;
+      }
+      .post-meta {
+        font-family: "Montserrat", sans-serif;
+        font-size: 11px;
+        color: var(--text-light);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 4px;
+      }
+      .post-meta span { display: flex; align-items: center; gap: 4px; }
+
+      /* CTA no blog */
+      .blog-cta {
+        background: var(--primary-dark);
+        color: var(--white);
+        text-align: center;
+        padding: 64px 24px;
+      }
+      .blog-cta-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      .blog-cta-sub {
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        opacity: 0.8;
+        margin-bottom: 28px;
+      }
+      .blog-cta-btn {
+        display: inline-block;
+        background: var(--accent);
+        color: var(--primary-dark);
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 14px 32px;
+        border-radius: 100px;
+        text-decoration: none;
+        transition: opacity 200ms ease;
+      }
+      .blog-cta-btn:hover { opacity: 0.88; }
+
+      /* Footer */
+      .blog-footer {
+        background: var(--primary-dark);
+        color: rgba(255,255,255,0.5);
+        text-align: center;
+        padding: 24px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+      }
+      .blog-footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="blog-nav">
+      <a href="./index.html" class="nav-logo">
+        <img src="./assets/png/logo.png" alt="Logo Paola Ribeiro Nutricionista" width="30" height="30" loading="eager" decoding="sync" />
+        <div>
+          <span class="nav-logo-name">Paola Ribeiro</span>
+          <span class="nav-logo-sub">Nutricionista</span>
+        </div>
+      </a>
+      <a href="./index.html" class="nav-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Voltar ao site
+      </a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="blog-hero">
+      <p class="blog-hero-tag">Nutrição baseada em ciência</p>
+      <h1 class="blog-hero-title">Blog da Paola</h1>
+      <p class="blog-hero-sub">Artigos práticos sobre emagrecimento, performance, saúde hormonal e alimentação no dia a dia.</p>
+    </header>
+
+    <!-- Categorias -->
+    <div class="blog-cats">
+      <button class="blog-cat-btn active">Todos</button>
+      <button class="blog-cat-btn">Emagrecimento</button>
+      <button class="blog-cat-btn">Performance</button>
+      <button class="blog-cat-btn">Saúde Hormonal</button>
+      <button class="blog-cat-btn">Nutrição Clínica</button>
+      <button class="blog-cat-btn">Hábitos</button>
+    </div>
+
+    <!-- Grid de artigos -->
+    <main class="blog-grid-wrap">
+      <div class="blog-grid">
+
+        <!-- Artigo 1 -->
+        <a href="./blog-emagrecer-mesmo-fazendo-dieta.html" class="post-card" aria-label="Ler artigo: Por que você não consegue emagrecer mesmo fazendo dieta">
+          <div class="post-card-img" aria-hidden="true">🥗</div>
+          <div class="post-card-body">
+            <span class="post-cat-tag">Emagrecimento</span>
+            <h2 class="post-title">Por que você não consegue emagrecer mesmo fazendo dieta</h2>
+            <p class="post-excerpt">Restrição calórica extrema, fome constante e efeito sanfona. Entenda por que dietas restritivas não funcionam a longo prazo — e o que realmente faz diferença.</p>
+            <div class="post-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                21 de jun. de 2026
+              </span>
+              <span>· 6 min de leitura</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Artigo 2 -->
+        <a href="./blog-nutricao-esportiva-academia.html" class="post-card" aria-label="Ler artigo: Como a nutrição esportiva pode acelerar seus resultados na academia">
+          <div class="post-card-img" aria-hidden="true">💪</div>
+          <div class="post-card-body">
+            <span class="post-cat-tag">Performance</span>
+            <h2 class="post-title">Como a nutrição esportiva pode acelerar seus resultados na academia</h2>
+            <p class="post-excerpt">Periodização nutricional, timing de proteína e estratégias de recuperação. O que a ciência diz sobre nutrição para quem treina.</p>
+            <div class="post-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                21 de jun. de 2026
+              </span>
+              <span>· 8 min de leitura</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Artigo 3 -->
+        <a href="./blog-sop-alimentacao.html" class="post-card" aria-label="Ler artigo: SOP e alimentação: o que ajuda de verdade">
+          <div class="post-card-img" aria-hidden="true">🌿</div>
+          <div class="post-card-body">
+            <span class="post-cat-tag">Saúde Hormonal</span>
+            <h2 class="post-title">SOP e alimentação: o que ajuda de verdade</h2>
+            <p class="post-excerpt">Síndrome dos ovários policísticos afeta até 10% das mulheres. Veja quais ajustes alimentares têm evidência científica para reduzir os sintomas.</p>
+            <div class="post-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                21 de jun. de 2026
+              </span>
+              <span>· 7 min de leitura</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Artigo 4 -->
+        <a href="./blog-resistencia-insulina.html" class="post-card" aria-label="Ler artigo: Resistência à insulina: sintomas, causas e o papel da alimentação">
+          <div class="post-card-img" aria-hidden="true">🩺</div>
+          <div class="post-card-body">
+            <span class="post-cat-tag">Nutrição Clínica</span>
+            <h2 class="post-title">Resistência à insulina: sintomas, causas e o papel da alimentação</h2>
+            <p class="post-excerpt">Cansaço, dificuldade para emagrecer e compulsão por doce podem ser sinais de resistência à insulina. Entenda o que acontece no seu corpo e como reverter.</p>
+            <div class="post-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                21 de jun. de 2026
+              </span>
+              <span>· 9 min de leitura</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Artigo 5 -->
+        <a href="./blog-habitos-sabotam-emagrecimento.html" class="post-card" aria-label="Ler artigo: 5 hábitos alimentares que sabotam o emagrecimento sem você perceber">
+          <div class="post-card-img" aria-hidden="true">📋</div>
+          <div class="post-card-body">
+            <span class="post-cat-tag">Hábitos</span>
+            <h2 class="post-title">5 hábitos alimentares que sabotam o emagrecimento sem você perceber</h2>
+            <p class="post-excerpt">Comer rápido, pular o café da manhã, beber pouca água... Comportamentos cotidianos que têm impacto real no seu metabolismo e na balança.</p>
+            <div class="post-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                21 de jun. de 2026
+              </span>
+              <span>· 5 min de leitura</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Artigo 6 -->
+        <a href="./blog-suplementacao-inteligente.html" class="post-card" aria-label="Ler artigo: Suplementação inteligente: o que vale a pena e o que é marketing">
+          <div class="post-card-img" aria-hidden="true">⚡</div>
+          <div class="post-card-body">
+            <span class="post-cat-tag">Performance</span>
+            <h2 class="post-title">Suplementação inteligente: o que vale a pena e o que é marketing</h2>
+            <p class="post-excerpt">Proteína, creatina, cafeína, BCAAs, colágeno. O que a ciência realmente comprova — e o que você pode poupar dinheiro evitando.</p>
+            <div class="post-meta">
+              <span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                21 de jun. de 2026
+              </span>
+              <span>· 7 min de leitura</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </main>
+
+    <!-- CTA -->
+    <section class="blog-cta">
+      <h2 class="blog-cta-title">Quer uma orientação personalizada?</h2>
+      <p class="blog-cta-sub">Artigos são conteúdo geral — a consulta é feita para o seu corpo e seus objetivos.</p>
+      <a href="https://wa.me/5516992218844?text=Ol%C3%A1%2C+vim+pelo+blog+e+gostaria+de+agendar+uma+consulta." target="_blank" rel="noopener" class="blog-cta-btn">Agendar consulta</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="blog-footer">
+      <p>© 2026 Paola Ribeiro Nutricionista · CRN-3 76261 · <a href="./privacidade.html">Política de Privacidade</a> · <a href="./index.html">Voltar ao site</a></p>
+    </footer>
+
+    <script>
+      // Filtro de categorias (comportamento visual básico)
+      document.querySelectorAll(".blog-cat-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".blog-cat-btn").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

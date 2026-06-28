@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python --version 2>&1; python -c \"from PIL import Image; print\\('Pillow OK'\\)\" 2>&1)",
+      "PowerShell(pip install *)",
+      "PowerShell(python -c \"from PIL import Image; print\\('Pillow OK'\\)\")",
+      "PowerShell(ngrok version *)",
+      "Bash(python -m http.server 8090)",
+      "Bash(ngrok http *)",
+      "Bash(curl -s http://localhost:4040/api/tunnels)",
+      "Bash(curl -s http://localhost:8090/)"
+    ]
+  }
+}
