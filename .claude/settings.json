@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(muscle-arm)",
+      "Bash(health-care)",
+      "Bash(doctor)",
+      "Bash(diet-svgrepo)",
+      "Bash(lightning-svgrepo\")",
+      "Bash(start \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\blog.html\")",
+      "Bash(start \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\blog-habitos-sabotam-emagrecimento.html\")",
+      "Bash(start \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\blog-nutricao-esportiva-academia.html\")",
+      "Bash(start \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\blog-resistencia-insulina.html\")",
+      "Bash(start \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\blog-emagrecer-mesmo-fazendo-dieta.html\")",
+      "Bash(start \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\blog-sop-alimentacao.html\")",
+      "Bash(start \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\blog-suplementacao-inteligente.html\")"
+    ]
+  }
+}

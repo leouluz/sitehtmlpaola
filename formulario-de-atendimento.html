@@ -507,7 +507,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: background 200ms ease, border-color 200ms ease;
+        transition:
+          background 200ms ease,
+          border-color 200ms ease;
       }
       .obj-card.selected .obj-check {
         background: var(--accent);
@@ -554,7 +556,9 @@
         text-align: center;
         cursor: pointer;
         background: var(--white);
-        transition: border-color 200ms ease, background 200ms ease;
+        transition:
+          border-color 200ms ease,
+          background 200ms ease;
         user-select: none;
       }
       .scale-btn .emoji {
@@ -593,7 +597,9 @@
         padding: 16px 14px;
         cursor: pointer;
         background: var(--white);
-        transition: border-color 200ms ease, background 200ms ease;
+        transition:
+          border-color 200ms ease,
+          background 200ms ease;
         user-select: none;
       }
       .rel-card:hover {
@@ -684,7 +690,9 @@
         border-radius: var(--radius-sm);
         padding: 15px 28px;
         cursor: pointer;
-        transition: background 200ms ease, transform 200ms ease;
+        transition:
+          background 200ms ease,
+          transform 200ms ease;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -789,7 +797,9 @@
         border-radius: var(--radius-sm);
         padding: 14px 28px;
         text-decoration: none;
-        transition: background 200ms ease, color 200ms ease;
+        transition:
+          background 200ms ease,
+          color 200ms ease;
       }
       .btn-back-home:hover {
         background: var(--primary);
@@ -878,7 +888,14 @@
 
     <!-- MAIN -->
     <main class="form-main" id="form-main">
-      <input type="text" name="botcheck" id="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+      <input
+        type="text"
+        name="botcheck"
+        id="botcheck"
+        style="display: none"
+        tabindex="-1"
+        autocomplete="off"
+      />
       <!-- Step indicator -->
       <div class="step-indicator" id="step-indicator">
         <span class="step-label" id="step-label-text">Etapa 1 de 7</span>
@@ -3110,31 +3127,9 @@
         </div>
 
         <div class="field-group">
-          <label class="field-label">Prefere atendimento:</label>
-          <div class="radio-group" id="tipo-atend-group">
-            <label class="radio-label"
-              ><input type="radio" name="tipo_atend" value="online" /><span
-                class="radio-custom"
-              ></span
-              >Online (videochamada)</label
-            >
-            <label class="radio-label"
-              ><input type="radio" name="tipo_atend" value="presencial" /><span
-                class="radio-custom"
-              ></span
-              >Presencial (Ribeirão Preto)</label
-            >
-            <label class="radio-label"
-              ><input type="radio" name="tipo_atend" value="sem-pref" /><span
-                class="radio-custom"
-              ></span
-              >Sem preferência</label
-            >
-          </div>
-        </div>
-
-        <div class="field-group">
-          <label class="field-label">Horário preferido para consultas:</label>
+          <label class="field-label"
+            >Horário preferido para consultas online:</label
+          >
           <div class="check-group inline">
             <label class="check-label"
               ><input type="checkbox" name="horario" value="manha" /><span
@@ -3160,52 +3155,6 @@
               ></span
               >Sábado</label
             >
-          </div>
-        </div>
-
-        <div class="field-group">
-          <label class="field-label" for="prazo-resultado"
-            >Em quanto tempo espera ver resultados?</label
-          >
-          <select
-            class="field-select"
-            id="prazo-resultado"
-            name="prazo_resultado"
-          >
-            <option value="">Selecione...</option>
-            <option>Curto prazo (1–2 meses)</option>
-            <option>Médio prazo (3–6 meses)</option>
-            <option>Longo prazo (6+ meses)</option>
-            <option>Sem pressa — quero aprender</option>
-          </select>
-        </div>
-
-        <div class="field-group">
-          <label class="field-label">Tem data / evento importante?</label>
-          <div class="radio-group inline" id="data-imp-group">
-            <label class="radio-label"
-              ><input type="radio" name="data_importante" value="sim" /><span
-                class="radio-custom"
-              ></span
-              >Sim</label
-            >
-            <label class="radio-label"
-              ><input type="radio" name="data_importante" value="nao" /><span
-                class="radio-custom"
-              ></span
-              >Não</label
-            >
-          </div>
-          <div class="cond-field" id="cond-data-imp">
-            <div class="fields-2col" style="margin-top: 10px">
-              <input class="field-input" type="date" name="data_imp_data" />
-              <input
-                class="field-input"
-                type="text"
-                name="data_imp_desc"
-                placeholder="Qual o evento?"
-              />
-            </div>
           </div>
         </div>
 
@@ -3275,9 +3224,10 @@
                 >Política de Privacidade</a
               >
               e autorizo o uso dos meus dados, incluindo dados de saúde,
-              exclusivamente para fins de avaliação e acompanhamento
-              nutricional pela nutricionista Paola Ribeiro (CRN-3
-              76261).<span class="req" style="color: var(--accent)"
+              exclusivamente para fins de avaliação e acompanhamento nutricional
+              pela nutricionista Paola Ribeiro (CRN-3 76261).<span
+                class="req"
+                style="color: var(--accent)"
                 >*</span
               ></span
             >
@@ -3469,7 +3419,10 @@
         }
 
         if (n === 2) {
-          const pesoRaw = document.getElementById("peso").value || document.getElementById("peso").getAttribute("data-raw") || "";
+          const pesoRaw =
+            document.getElementById("peso").value ||
+            document.getElementById("peso").getAttribute("data-raw") ||
+            "";
           const peso = parseFloat(pesoRaw.replace(",", "."));
           if (isNaN(peso) || peso < 30 || peso > 300) {
             markErr("peso", true);
@@ -3480,7 +3433,10 @@
             showErr("err-peso", false);
           }
 
-          const altRaw = document.getElementById("altura").value || document.getElementById("altura").getAttribute("data-raw") || "";
+          const altRaw =
+            document.getElementById("altura").value ||
+            document.getElementById("altura").getAttribute("data-raw") ||
+            "";
           const alt = parseFloat(altRaw.replace(",", "."));
           if (isNaN(alt) || alt < 100 || alt > 250) {
             markErr("altura", true);
@@ -4123,12 +4079,12 @@ Enviado pelo site paolaribeironutricionista.com.br`;
         pill.className = "field-computed " + cls;
         pill.textContent = txt;
       }
-      document.getElementById("peso").addEventListener("input", function() {
+      document.getElementById("peso").addEventListener("input", function () {
         // Salva valor bruto antes que o browser sanitize (lida com vírgula decimal)
         if (this.value !== "") this.setAttribute("data-raw", this.value);
         calcIMC();
       });
-      document.getElementById("altura").addEventListener("input", function() {
+      document.getElementById("altura").addEventListener("input", function () {
         if (this.value !== "") this.setAttribute("data-raw", this.value);
         calcIMC();
       });
