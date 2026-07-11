@@ -12,7 +12,10 @@
       "Bash(start \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\blog-resistencia-insulina.html\")",
       "Bash(start \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\blog-emagrecer-mesmo-fazendo-dieta.html\")",
       "Bash(start \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\blog-sop-alimentacao.html\")",
-      "Bash(start \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\blog-suplementacao-inteligente.html\")"
+      "Bash(start \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\blog-suplementacao-inteligente.html\")",
+      "Bash(grep -n \"#especialidades,\\\\|#como-funciona,\\\\|espec-grid {\" \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\index.html\")",
+      "Bash(node -e ' *)",
+      "Bash(start \"\" \"c:\\\\Users\\\\leolu\\\\OneDrive\\\\Desktop\\\\sitehtmlpaola\\\\index.html\")"
     ]
   }
 }
