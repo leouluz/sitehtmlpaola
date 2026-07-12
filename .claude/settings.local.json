@@ -8,7 +8,8 @@
       "Bash(python -m http.server 8090)",
       "Bash(ngrok http *)",
       "Bash(curl -s http://localhost:4040/api/tunnels)",
-      "Bash(curl -s http://localhost:8090/)"
+      "Bash(curl -s http://localhost:8090/)",
+      "Bash(node -e ' *)"
     ]
   }
 }
