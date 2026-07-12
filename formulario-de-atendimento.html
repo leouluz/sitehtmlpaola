@@ -77,6 +77,7 @@
         --primary-light: #2e7d52;
         --primary-dark: #0f3d24;
         --accent: #c9a84c;
+        --accent-dark: #806827;
         --accent-light: #e8d5a3;
         --bg: #faf8f4;
         --bg-alt: #f0f7f3;
@@ -133,11 +134,25 @@
         text-decoration: none;
         flex-shrink: 0;
       }
+      .header-logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+      }
       .header-logo-name {
         font-family: "Cormorant Garamond", serif;
-        font-size: 17px;
+        font-size: 18px;
         font-weight: 600;
         color: var(--primary);
+        letter-spacing: 0.02em;
+      }
+      .header-logo-sub {
+        font-family: "Montserrat", sans-serif;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent-dark);
       }
       .header-title {
         font-family: "Montserrat", sans-serif;
@@ -848,7 +863,10 @@
             width="30"
             height="30"
           />
-          <span class="header-logo-name">Paola Ribeiro</span>
+          <div class="header-logo-text">
+            <span class="header-logo-name">Paola Ribeiro</span>
+            <span class="header-logo-sub">Nutricionista</span>
+          </div>
         </a>
         <span class="header-title" id="header-step-title"
           >Formulário de Atendimento</span

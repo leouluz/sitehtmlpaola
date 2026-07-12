@@ -65,10 +65,15 @@
         gap: 6px;
       }
       .nav-logo {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 20px;
-        color: var(--primary-dark);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
       }
+      .nav-logo img { height: 30px; width: 30px; }
+      .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+      .nav-logo-name { font-family: "Cormorant Garamond", serif; font-size: 18px; font-weight: 600; color: var(--primary); letter-spacing: 0.02em; }
+      .nav-logo-sub { font-family: "Montserrat", sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-dark); }
       main {
         max-width: 760px;
         margin: 0 auto;
@@ -121,7 +126,13 @@
   </head>
   <body>
     <nav class="nav">
-      <a href="./index.html" class="nav-logo">Paola Ribeiro</a>
+      <a href="./index.html" class="nav-logo">
+        <img src="./assets/png/logo.png" alt="Logo Paola Ribeiro Nutricionista" width="30" height="30" />
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Paola Ribeiro</span>
+          <span class="nav-logo-sub">Nutricionista</span>
+        </div>
+      </a>
       <a href="./index.html">← Voltar ao site</a>
     </nav>
 
@@ -209,7 +220,7 @@
     </main>
 
     <footer>
-      © 2026 Paola Ribeiro Nutricionista · CRN-3 76261 · <a href="./index.html">Voltar ao site</a>
+      © 2026 Paola Ribeiro Nutricionista · CRN-3 76261 · <a href="./index.html">Voltar ao site</a> · Desenvolvido por <a href="https://kryo.digital" target="_blank" rel="noopener">Kryo Digital</a>
     </footer>
   </body>
 </html>
