@@ -4,7 +4,7 @@
 
 Formulário de anamnese nutricional com **7 etapas** e barra de progresso visual. Os dados são salvos automaticamente no `sessionStorage` para que o paciente não perca o preenchimento ao navegar.
 
-Ao finalizar, os dados são enviados por e-mail via **Web3Forms API** para `paola@paolaribeironutricionista.com.br`. Se o envio falhar, há um fallback para WhatsApp.
+Ao finalizar, os dados são enviados por e-mail via **Web3Forms API** para `nutri.paolaribeiro@gmail.com`. Se o envio falhar, há um fallback para WhatsApp.
 
 **API Key Web3Forms:** `f0e26518-6581-4c96-8416-e34265b35c02`
 

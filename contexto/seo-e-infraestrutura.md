@@ -58,7 +58,7 @@ Implementado com tipo `MedicalBusiness`, incluindo:
 - **Método:** `POST`
 - **API Key:** `f0e26518-6581-4c96-8416-e34265b35c02`
 - **Limite plano gratuito:** 250 envios/mês
-- **Destino:** `paola@paolaribeironutricionista.com.br`
+- **Destino:** `nutri.paolaribeiro@gmail.com`
 - Usado tanto no formulário de contato simples (index.html) quanto no formulário de anamnese completo
 
 ## Deploy

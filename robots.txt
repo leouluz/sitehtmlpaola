@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.paolaribeironutricionista.com.br/sitemap.xml
+Sitemap: https://www.nutripaolaribeiro.com.br/sitemap.xml

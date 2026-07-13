@@ -42,6 +42,6 @@ sitehtmlpaola/
 ## Informações de contato configuradas no site
 
 - **WhatsApp:** +55 (16) 99999-0000
-- **E-mail:** paola@paolaribeironutricionista.com.br
+- **E-mail:** nutri.paolaribeiro@gmail.com
 - **Instagram:** @nutri.paolaribeiro
 - **Horário:** Seg–Sex 8h–18h · Sáb 8h–12h
